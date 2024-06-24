@@ -1778,6 +1778,10 @@ error:
                 pc = catch;
 
                 NEXT;
+            } else {
+                printf("[!] Bad programmer\n");
+                fflush(stdout);
+                *(int*)(0xdeadbeef) = 0x41414141;
             }
         }
 
