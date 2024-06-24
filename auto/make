@@ -135,10 +135,10 @@ done
 
 cat << END >> $NJS_MAKEFILE
 
-$NJS_BUILD_DIR/njs: \\
+$NJS_BUILD_DIR/lavascript: \\
 	$NJS_BUILD_DIR/libnjs.a \\
 	external/njs_shell.c
-	\$(NJS_LINK) -o $NJS_BUILD_DIR/njs \$(NJS_LIB_INCS) \\
+	\$(NJS_LINK) -o $NJS_BUILD_DIR/lavascript \$(NJS_LIB_INCS) \\
 		\$(NJS_CFLAGS) \$(NJS_LIB_AUX_CFLAGS)\\
 		external/njs_shell.c \\
 		$NJS_BUILD_DIR/libnjs.a \\
@@ -258,7 +258,7 @@ $NJS_BUILD_DIR/njs_auto_config.h:
 all: $NJS_BUILD_DIR/njs_auto_config.h \\
 	njs ts test lib_test benchmark
 
-njs: $NJS_BUILD_DIR/njs_auto_config.h $NJS_BUILD_DIR/njs
+lavascript: $NJS_BUILD_DIR/njs_auto_config.h $NJS_BUILD_DIR/lavascript
 njs_fuzzer: $NJS_BUILD_DIR/njs_auto_config.h \\
 	$NJS_BUILD_DIR/njs_process_script_fuzzer
 
