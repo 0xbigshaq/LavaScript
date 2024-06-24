@@ -26,7 +26,7 @@ Because why not? Here are some compelling reasons to switch to LavaScript today:
     git clone git@github.com:0xbigshaq/LavaScript.git
     cd LavaScript
     ./configure
-    make
+    make lavascript
     ```
 
 2. **Running Your First LavaScript Program**:
